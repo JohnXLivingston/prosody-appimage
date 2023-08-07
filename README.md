@@ -28,13 +28,29 @@ To avoid building two appimages (one for the server, one for prosodyctl), the ge
 when calling the binary, the first argument has to be `prosody` or `prododyctl`, depending on which you want to run.
 Other parameters will be passed unchanged to `prosody` or `prosodyctl`.
 
+Important note: by default, the AppImage will try to read configuration files et the AppImage itself, and this won't work.
+You have always to provide a `prosody.cfg.lua` file, using the `--config` option. See the [Prosody documentation](https://prosody.im/doc),
+or the sample file in the [samples folder](./samples/prosody.cfg.lua).
+
 Some examples:
 
 ```bash
-# launch the server, using defaults Prosody configuration files that is included in the AppImage:
-prosody-x86_64.AppImage prosody
-# use prosodyctl to start the server, using a custom configuration file:
-prosody-x86_64.AppImage prosodyctl start --config use_this_file.cfg.lua
+# launch the server:
+prosody-x86_64.AppImage prosody --config sample/prosody.cfg.lua
+# use prosodyctl to start the server
+prosody-x86_64.AppImage prosodyctl --config sample/prosody.cfg.lua start
+```
+
+Note: if you want to try the provided sample file, please first create directories `samples/certs` and `samples/data`.
+
+The AppImage itself is a compressed archive. To avoid decompressing it everytime, or if Fuse is not available on your host,
+you can decompression the AppImage using the `--appimage-extract` parameters:
+
+```bash
+# decompress:
+prosody-x86_64.AppImage --appimage-extract
+# then run from the uncompressed path:
+./squashfs-root/AppRun prosodyctl --config sample/prosody.cfg.lua status
 ```
 
 ## Build
