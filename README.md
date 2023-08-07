@@ -69,3 +69,5 @@ To build the AppImage, just run the `build.sh` script.
 Note: appimage-builder 1.1.0 has a bug for ARM64 builds. This bug was patched, but the patch was not released. So, for now,
 the build script makes a hot-patch.
 See [aarch64 builds made from debian repository are not working](https://github.com/AppImageCrafters/appimage-builder/issues/278) for more information.
+
+The build images will be in the `dist` directory.
