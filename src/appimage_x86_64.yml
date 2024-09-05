@@ -41,6 +41,7 @@ AppDir:
       # lua-zlib is suggested. Not sure it is used, by make sense to add.
       - lua-zlib
       - lua-sec
+      - lua-rex-pcre2
       - prosody/bookworm-backports
 
   files:

@@ -1,5 +1,10 @@
 # Prosody-AppImage
 
+## 0.12.4-2
+
+* Based on Debian 12.7.
+* Added lua-rex-pcre2 package (so we can use regular expressions in Prosody modules).
+
 ## 0.12.4-1
 
 * Using Debian bookworm repository, instead of bullseye.
