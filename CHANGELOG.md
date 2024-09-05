@@ -1,5 +1,10 @@
 # Prosody-AppImage
 
+## 0.12.4-3
+
+* Added lua-rex-onig package.
+* Fix version in app_info.
+
 ## 0.12.4-2
 
 * Based on Debian 12.7.

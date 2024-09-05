@@ -20,7 +20,7 @@ AppDir:
     id: im.prosody
     name: prosody
     icon: prosody
-    version: 0.12.4-1
+    version: 0.12.4-3
     exec: usr/bin/lua5.4
     exec_args: "$APPDIR/usr/bin/launcher.lua $@"
 
@@ -42,6 +42,7 @@ AppDir:
       - lua-zlib
       - lua-sec
       - lua-rex-pcre2
+      - lua-rex-onig
       - prosody/bookworm-backports
 
   files:
