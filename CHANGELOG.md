@@ -1,5 +1,10 @@
 # Prosody-AppImage
 
+## 13.0.1-1
+
+* Using Debian trixie repository, instead of bookworm.
+* update to 13.0.1-1
+
 ## 0.12.4-3
 
 * Added lua-rex-onig package.
