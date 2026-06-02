@@ -1,9 +1,11 @@
 # Prosody-AppImage
 
-## 13.0.1-1
+## 13.0.6
 
 * Using Debian trixie repository, instead of bookworm.
-* update to 13.0.1-1
+* Added Prosody's own repository
+* Using fetched keys instead of apt-key (deprecated in Debian Trixie)
+* update to 13.0.6
 
 ## 0.12.4-3
 
