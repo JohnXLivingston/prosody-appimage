@@ -20,22 +20,22 @@ AppDir:
     id: im.prosody
     name: prosody
     icon: prosody
-    version: 0.12.4-3
+    version: 13.0.6
     exec: usr/bin/lua5.4
     exec_args: "$APPDIR/usr/bin/launcher.lua $@"
 
   apt:
     arch: amd64
     sources:
-      - sourceline: 'deb [arch=amd64] https://deb.debian.org/debian/ bookworm main contrib'
-        key_url: 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x648ACFD622F3D138'
-      - sourceline: 'deb [arch=amd64] https://deb.debian.org/debian/ bookworm-backports main contrib'
-        key_url: 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x0E98404D386FA1D9'
+      - sourceline: "deb [arch=amd64] https://deb.debian.org/debian/ trixie main contrib"
+        key_url: https://ftp-master.debian.org/keys/archive-key-13.asc
+      - sourceline: "deb [arch=amd64] http://packages.prosody.im/debian trixie main"
+        key_url: https://packages.prosody.im/debian/pubkey.asc
     include:
       - lua5.4
       # lua-unbound is needed
       - lua-unbound
-      # lua-readline and lua-event are recommanded dependencies
+      # lua-readline and lua-event are recommended dependencies
       - lua-readline
       - lua-event
       # lua-zlib is suggested. Not sure it is used, by make sense to add.
@@ -43,7 +43,7 @@ AppDir:
       - lua-sec
       - lua-rex-pcre2
       - lua-rex-onig
-      - prosody/bookworm-backports
+      - prosody/stable
 
   files:
     exclude:

@@ -1,5 +1,12 @@
 # Prosody-AppImage
 
+## 13.0.6
+
+* Using Debian trixie repository, instead of bookworm.
+* Added Prosody's own repository
+* Using fetched keys instead of apt-key (deprecated in Debian Trixie)
+* update to 13.0.6
+
 ## 0.12.4-3
 
 * Added lua-rex-onig package.
