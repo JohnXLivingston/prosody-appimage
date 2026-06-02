@@ -23,7 +23,7 @@ echo "Activating the python venv..."
 source venv/bin/activate
 
 echo "Installing appimage-builder..."
-pip3 install appimage-builder==1.1.0
+pip3 install appimage-builder@git+https://github.com/Murazaki/appimage-builder@90d67a4
 
 echo "Unpatching appimage-builder for ARM..."
 # see https://github.com/AppImageCrafters/appimage-builder/issues/278 for more information
